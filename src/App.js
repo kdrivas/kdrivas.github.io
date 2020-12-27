@@ -1,18 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import MainPage from './pages/MainPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-				<h1>Hola mundo</h1>
-      </header>
-    </div>
-  );
+	return (<MainPage>
+
+		</MainPage>);
 }
 
 export default App;
