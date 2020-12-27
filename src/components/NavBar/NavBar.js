@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const NavBar = ({children}) => {
 	return (
@@ -16,10 +15,6 @@ const NavBar = ({children}) => {
 			{children}
 		</div>
 	);
-};
-
-NavBar.propTypes = {
-	
 };
 
 export default NavBar;
