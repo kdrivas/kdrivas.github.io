@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
-import Profile from '../components/Profile';
+import NavBar from './../components/NavBar';
+import Profile from './../components/Profile';
 
 const MainPage = props => {
 	return (
@@ -9,7 +9,7 @@ const MainPage = props => {
 				HomePage
 			</div>
 			<Profile></Profile>
-			
+
 		</NavBar>
 	);
 };
