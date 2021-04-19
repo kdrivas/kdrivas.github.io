@@ -1,18 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { MenuItems } from './../../constants/NavBar';
+import Button from './../Button';
+import Hamburguer from './Hamburguer';
+import './NavBar.css';
+
+const handleClick = (setClicked, clicked) => {
+	setClicked(! clicked);
+}
 
 const NavBar = ({children}) => {
+	const [clicked, setClicked] = useState(false);
 	return (
 		<div>
-			<ul>
-				<li><span>Dante Rivas</span></li>
-				<li>About</li>
-				<li>Experience</li>
-				<li>Achievements</li>
-				<li>Publications</li>
-				<li>Blog</li>
-				<li>Contact</li>
-			</ul>
-			{children}
+			<nav className="NavItems">
+				<div className="menu-icon" onClick={event => handleClick(setClicked, clicked)}>
+					<Hamburguer status={clicked ? "open" : "close"}></Hamburguer>
+				</div>
+				<ul className={clicked ? "nav-menu active" : "nav-menu"}>
+					{
+						MenuItems.map((item, index) => {
+							return <li key={index}>
+								<a className={item.cName} href={item.url}>{item.text}</a>
+							</li>
+						})
+					}
+				</ul>
+				<div className="navbar-button">
+					<Button className="btn">
+						My Resume
+					</Button>
+				</div>
+			</nav>
+		{children}
 		</div>
 	);
 };

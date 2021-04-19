@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 const Experience = props => {
 	return (
 		<div>
-			Experience
+			<div>Expierence</div>
+			<div>
+				<div>
+					
+				</div>
+			</div>
 		</div>
 	);
 };

@@ -1,0 +1,23 @@
+export const MenuItems = [
+	{text: 'About',
+	cName: 'navbar-link',
+  url: '#'},
+	{text: 'Experience',
+	cName: 'navbar-link',
+  url: '#'},
+	{text: 'Achievements',
+	cName: 'navbar-link',
+  url: '#'},
+	{text: 'Publications',
+	cName: 'navbar-link',
+  url: '#'},
+	{text: 'Blog',
+	cName: 'navbar-link',
+  url: '#'},
+	{text: 'Contact',
+	cName: 'navbar-link',
+  url: '#'},
+	{text: 'Resume',
+	cName: 'navbar-mobile-link',
+  url: '#'}
+]
