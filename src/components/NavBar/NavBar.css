@@ -44,7 +44,7 @@
 	display: none;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 968px){
 	.NavItems {
 		position: relative;
 		font-size: 1.1rem;
@@ -54,7 +54,7 @@
 		display: flex;
 		flex-direction: column;
 		position: fixed;
-		width: 80%;
+		width: 70%;
 		height: 100%;
 		top: 70px;
 		right: -100%;
@@ -76,9 +76,11 @@
 
 	.navbar-link{
 		text-align: center;
-		padding: 25px;
+		justify-content: center;
+		padding-top: 4%;
+		padding-bottom: 4%;
 		width: 100%;
-		display: table;
+		display: block;
 	}
 
 	.navbar-mobile-link{
@@ -110,7 +112,7 @@
 		font-size: 1.8rem;
 		top: 0;
 		right: 0;
-		transform: translate(-140%, 50%);
+		transform: translate(-40%, 50%);
 	}
 
 	.navbar-button{
