@@ -31,7 +31,9 @@ const NavBar = ({children}) => {
 					</Button>
 				</div>
 			</nav>
-		{children}
+			<div className={clicked ? "blur active" : "blur"}>
+				{children}
+			</div>
 		</div>
 	);
 };

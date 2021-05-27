@@ -1,0 +1,68 @@
+#section-about {
+	padding: 10%;
+}
+
+.title {
+	font-size: 7vh;
+	padding-bottom: 5%;
+}
+
+.description {
+	display: inline-block;
+	padding: 5%;
+	width: 50%;
+}
+
+.skills {
+	width: 50%;
+	padding: 5%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.progress-bar {
+	width: 100%;
+	height: 5px;
+	margin: 10px;
+	border-radius: 4px;
+	background-color: rgb(190, 185, 185);
+}
+
+.val-100 {
+	width: 100%;
+	margin: 0;
+	background-color: rgb(106, 100, 184);
+}
+
+.val-95 {
+	width: 95%;
+	margin: 0;
+	background-color: rgb(106, 100, 184);
+}
+
+.val-90 {
+	width: 90%;
+	margin: 0;
+	background-color: rgb(106, 100, 184);
+}
+
+.val-80 {
+	width: 80%;
+	margin: 0;
+	background-color: rgb(106, 100, 184);
+}
+
+#section-about p {
+	padding-bottom: 3%;
+	text-align: justify;
+}
+
+@media screen and (max-width: 968px){
+	.skills {
+		display: inline;
+	}
+
+	.description {
+		display: inline;
+	}
+}

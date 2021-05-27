@@ -1,0 +1,16 @@
+#section-profile{
+	padding-right: 20%;
+	padding-left: 5%;
+	padding-top: 10%;
+	padding-bottom: 20%;
+}
+
+#section-profile p{
+	padding-top: 6%;
+	font-size: 3vh;
+}
+
+#section-profile h1{
+	padding-top: 1%;
+	font-size: 10vmax;
+}
