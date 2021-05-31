@@ -6,3 +6,21 @@
 	font-size: 7vh;
 	padding-bottom: 5%;
 }
+
+.activities {
+	padding-left: 5%;
+	font-size: 2.5vh;
+}
+
+.activities li {
+	padding-top: 2%;
+	text-align: justify;
+}
+
+.job-role {
+	font-size: 3.7vh;
+}
+
+.date-range {
+	font-size: 2vh;
+}

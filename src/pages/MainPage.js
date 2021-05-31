@@ -4,7 +4,6 @@ import Profile from './../components/Profile';
 import About from './../components/About';
 import Experience from './../components/Experience';
 import Publications from './../components/Publications';
-import Achievements from './../components/Achievements';
 import Contact from './../components/Contact';
 
 const MainPage = props => {
@@ -14,7 +13,6 @@ const MainPage = props => {
 				<About/>
 				<Experience/>
 				<Publications/>
-				<Achievements/>
 				<Contact/>
 			</NavBar>
 	);

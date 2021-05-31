@@ -1,0 +1,21 @@
+#section-pub {
+	padding: 10%;
+}
+
+.title {
+	font-size: 7vh;
+	padding-bottom: 5%;
+}
+
+.list-paper{
+	list-style: none;
+	padding: 2%;
+}
+
+.paper{
+	padding-top: 3%;
+}
+
+.paper a{
+	text-decoration: none;
+}
