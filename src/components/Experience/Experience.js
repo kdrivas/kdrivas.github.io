@@ -7,6 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const WORKS = [
 	{jobRole: 'Research Assistant', dateRange: 'November 2016 - April 2018', company: 'IAPUCP', activities: 
@@ -75,9 +77,6 @@ const useStylesHorizontal = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
 		width: '100%'
   },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
-  },
 }));
 
 const VerticalTab = ({classes, handleChange, value}) => {
@@ -86,17 +85,32 @@ const VerticalTab = ({classes, handleChange, value}) => {
 		variant="scrollable"
 		value={value}
 		onChange={handleChange}
-		aria-label="Vertical tabs example"
-		className={classes.tabs}
 	>
 	  {WORKS.map((work, index) => <Tab label={work.company} key={index} {...a11yProps(index)}/>)}
 	</Tabs>);
+}
+
+const HorizontalTab = ({classes, handleChange, value}) => {
+	return (
+	<AppBar position="static" color="default">
+		<Tabs
+			orientation="horizontal"
+			variant="scrollable"
+			value={value}
+			onChange={handleChange}
+			className={classes.tabs}
+		>
+			{WORKS.map((work, index) => <Tab label={work.company} key={index} {...a11yProps(index)}/>)}
+		</Tabs>
+	</AppBar>);
 }
 
 const Experience = props => {
   const classesVertical = useStylesVertical();
   const classesHorizontal = useStylesHorizontal();
   const [value, setValue] = React.useState(0);
+	const theme = useTheme();
+	const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -105,8 +119,8 @@ const Experience = props => {
 		<div id='section-exp'> 
 			<div className='title'>Experience</div>
 			<div>
-				<div className={classesVertical.root}>
-					<VerticalTab classes={classesVertical} handleChange={handleChange} value={value}/>
+				<div className={matches ? classesVertical.root : classesHorizontal.root}>
+					{matches ? <VerticalTab classes={classesVertical} handleChange={handleChange} value={value}/> : <HorizontalTab classes={classesHorizontal} handleChange={handleChange} value={value}/>}
 					{WORKS.map((work, index1) => 
 						(<TabPanel value={value} index={index1}> 
 							<div className="job-role">{work.jobRole}</div>
