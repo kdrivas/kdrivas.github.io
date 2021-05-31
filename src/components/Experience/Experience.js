@@ -85,7 +85,8 @@ const VerticalTab = ({classes, handleChange, value}) => {
 		variant="scrollable"
 		value={value}
 		onChange={handleChange}
-	>
+		className={classes.tabs}
+		>
 	  {WORKS.map((work, index) => <Tab label={work.company} key={index} {...a11yProps(index)}/>)}
 	</Tabs>);
 }
@@ -98,7 +99,6 @@ const HorizontalTab = ({classes, handleChange, value}) => {
 			variant="scrollable"
 			value={value}
 			onChange={handleChange}
-			className={classes.tabs}
 		>
 			{WORKS.map((work, index) => <Tab label={work.company} key={index} {...a11yProps(index)}/>)}
 		</Tabs>
