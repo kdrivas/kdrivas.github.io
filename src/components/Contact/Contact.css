@@ -1,0 +1,49 @@
+#section-contact {
+	padding: 10%;
+}
+
+.title {
+	font-size: 7vh;
+	padding-bottom: 5%;
+}
+
+.social-container {
+	display: grid;
+	grid-gap: 25px;
+	grid-template-columns: repeat(4, auto);
+	padding: 3%;
+	justify-content: center;
+}
+
+.social-container li {
+	list-style: none;
+}
+
+.form-container {
+	margin: 0 auto;
+}
+
+.message-container {
+	padding: 2% 0;
+}
+
+.message {
+	width: 80%;
+	height: 150px;
+	display: block;
+	margin: 0 auto;
+}
+
+.input {
+	width: 30%;
+	padding: 0 4%;
+}
+
+.label {
+	padding: 0 5%;
+}
+
+.data-container {
+	width: 80%;
+	margin: 0 auto;
+}

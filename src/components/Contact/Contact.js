@@ -1,24 +1,29 @@
 import React from 'react';
-import './Contact.js';
+import './Contact.css';
 
 const Contact = props => {
 	return (
 		<div id="section-contact">
 			<div className="title">Contact</div>
-			<ul>
+			<ul className="social-container">
 				<li>Linkedin</li>
 				<li>Google Scholar</li>
+				<li>Github</li>
 				<li>Twitter</li>
 			</ul>
-			<form>
-				<div>
-					<label for="fname">Name:</label>
-					<input type="text" name="firstname"/>
-					<label>Email:</label>
-					<input type="text" name="email"/>
+			<form className="form-container">
+				<div className="data-container">
+					<label for="fname" className="label">Name: </label>
+					<input type="text" name="firstname" className="input"/>
+					<label className="label">Email: </label>
+					<input type="text" name="email" className="input"/>
 				</div>
-				<input type="text" name="message"/>
-				<input type="submit" value="Submit"/>
+				<div className="message-container">
+					<textarea type="text" name="message" className="message"/>
+				</div>
+				<div>
+					<input type="submit" value="Submit"/>
+				</div>
 			</form>
 
 		</div>
