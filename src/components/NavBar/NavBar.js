@@ -9,6 +9,7 @@ const handleClick = (setClicked, clicked) => {
 }
 
 const NavBar = ({children}) => {
+
 	const [clicked, setClicked] = useState(false);
 	return (
 		<div>

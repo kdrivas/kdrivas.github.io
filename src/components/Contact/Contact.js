@@ -1,7 +1,23 @@
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
 import './Contact.css';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  margin: {
+    margin: '2.5%',
+    width: '45%',
+  },
+}));
+
 const Contact = props => {
+	const classes = useStyles();
+
 	return (
 		<div id="section-contact">
 			<div className="title">Contact</div>
@@ -11,21 +27,43 @@ const Contact = props => {
 				<li>Github</li>
 				<li>Twitter</li>
 			</ul>
-			<form className="form-container">
-				<div className="data-container">
-					<label for="fname" className="label">Name: </label>
-					<input type="text" name="firstname" className="input"/>
-					<label className="label">Email: </label>
-					<input type="text" name="email" className="input"/>
-				</div>
-				<div className="message-container">
-					<textarea type="text" name="message" className="message"/>
-				</div>
-				<div>
-					<input type="submit" value="Submit"/>
-				</div>
-			</form>
 
+			<div className="form-container">
+				<form name="gform" id="gform" enctype="text/plain"  action="https://docs.google.com/forms/d/e/1FAIpQLSdkTL3nPoHdnImX2VLz60P5aR2l7pdplvx7jF5vCT8E1CTJEA/formResponse?"  target="hidden_iframe" onsubmit="submitted=true">
+					<div className="data-container">
+						<TextField 
+							name="entry.1263638782" 
+							id="entry.1263638782" 
+							variant="filled" 
+							label="Name" 
+							inputProps={{min: 0, style: { textAlign: 'center' }}} 
+							className={classes.margin}/>
+						<TextField 
+							name="entry.1072577155" 
+							id="entry.1072577155" 
+							variant="filled" 
+							label="Email" 
+							inputProps={{min: 0, style: { textAlign: 'center' }}} 
+							className={classes.margin}/>
+					</div>
+					<div className="message-container">
+						<TextField
+							id="entry.1255610890"
+							name="entry.1255610890"
+							label="Message"
+							multiline
+							rows={4}
+							variant="filled"
+							fullWidth
+
+						/>
+					</div>
+					<div>
+						<input type="submit" value="Submit"/>
+					</div>
+				</form>
+				<iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {}" className="frame"></iframe>
+			</div>
 		</div>
 	);
 };
