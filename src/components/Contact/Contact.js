@@ -1,7 +1,8 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import FormControl from '@material-ui/core/FormControl';
+import Button from '@material-ui/core/Button';
 import './Contact.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
     margin: '2.5%',
     width: '45%',
   },
+	button: {
+		justifyContent: 'center',
+		textAlign: 'center'
+	}
 }));
 
 const Contact = props => {
@@ -59,7 +64,22 @@ const Contact = props => {
 						/>
 					</div>
 					<div>
-						<input type="submit" value="Submit"/>
+						<Grid
+							container
+							spacing={0}
+							direction="column"
+							alignItems="center"
+							justify="center"
+						>
+							<Button 
+								variant="contained" 
+								type="submit" 
+								value="Submit" 
+								color="primary" 
+								classes={classes.button}>
+								Submit
+							</Button>
+						</Grid>
 					</div>
 				</form>
 				<iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {}" className="frame"></iframe>
