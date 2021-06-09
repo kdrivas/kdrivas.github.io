@@ -63,7 +63,7 @@ const useStylesVertical = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
-		height: 400,
+		height: 350,
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
@@ -116,20 +116,23 @@ const Experience = props => {
     setValue(newValue);
   };
 	return (
-		<div id='section-exp'> 
-			<div className='title'>Experience</div>
-			<div>
-				<div className={matches ? classesVertical.root : classesHorizontal.root}>
-					{matches ? <VerticalTab classes={classesVertical} handleChange={handleChange} value={value}/> : <HorizontalTab classes={classesHorizontal} handleChange={handleChange} value={value}/>}
-					{WORKS.map((work, index1) => 
-						(<TabPanel value={value} index={index1}> 
-							<div className="job-role">{work.jobRole}</div>
-							<div className="date-range">{work.dateRange}</div>
-							<ul className="activities">
-								{work.activities.map((activity, index2) => <li key={index2}>{activity}</li>)}
-							</ul>
-						</TabPanel>))
-					}
+		<div>
+			<a id="experience"/>
+			<div id='section-exp'> 
+				<div className='title'>Experience</div>
+				<div>
+					<div className={matches ? classesVertical.root : classesHorizontal.root}>
+						{matches ? <VerticalTab classes={classesVertical} handleChange={handleChange} value={value}/> : <HorizontalTab classes={classesHorizontal} handleChange={handleChange} value={value}/>}
+						{WORKS.map((work, index1) => 
+							(<TabPanel value={value} index={index1}> 
+								<div className="job-role">{work.jobRole}</div>
+								<div className="date-range">{work.dateRange}</div>
+								<ul className="activities">
+									{work.activities.map((activity, index2) => <li key={index2}>{activity}</li>)}
+								</ul>
+							</TabPanel>))
+						}
+					</div>
 				</div>
 			</div>
 		</div>

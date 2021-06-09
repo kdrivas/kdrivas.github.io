@@ -1,11 +1,16 @@
 import React from 'react';
 import MainPage from './pages/MainPage';
+import {
+	HashRouter as Router
+} from 'react-router-dom';
 import './App.css';
 
 function App() {
-  return (<MainPage>
-			
-    </MainPage>
+
+  return (
+		<Router>
+			<MainPage/>
+		</Router>
   );
 }
 
