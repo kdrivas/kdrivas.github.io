@@ -19,18 +19,18 @@ const NavBar = ({children}) => {
 	const [scroll, setScroll] = useState(document.body.scrollTop);
 	const innerRef = useRef(null);
 
-	//useEffect(() => {
-	//	const div = innerRef.current;
-	//	window.addEventListener("scroll", handleScroll);
+	useEffect(() => {
+		const div = innerRef.current;
+		window.addEventListener("scroll", handleScroll);
 
-	//	return (() => {
-	//		window.removeEventListener("scroll", handleScroll);
-	//	});
-	//}, [scroll])
+		return (() => {
+			window.removeEventListener("scroll", handleScroll);
+		});
+	}, [scroll])
 
 	const handleScroll = (e) => {
-		// setScroll(document.body.getBoundingClientRect().top);
-		// setShowNav(document.body.getBoundingClientRect().top > scroll);
+	  setScroll(document.body.getBoundingClientRect().top);
+		setShowNav(document.body.getBoundingClientRect().top > scroll);
 	}
 
 	return (
