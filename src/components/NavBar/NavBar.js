@@ -3,10 +3,6 @@ import { MenuItems } from './../../constants/NavBar';
 import Button from './../Button';
 import Hamburguer from './Hamburguer';
 import './NavBar.css';
-import {
-	  Route,
-	  NavLink,
-	} from "react-router-dom";
 
 const handleClick = (setClicked, clicked) => {
 	setClicked(! clicked);
