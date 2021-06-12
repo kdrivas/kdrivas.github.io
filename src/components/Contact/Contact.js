@@ -24,7 +24,7 @@ const Contact = props => {
 	const classes = useStyles();
 
 	return (
-		<div>
+		<div className="contact-container">
 			<a id="contact"/>
 			<div id="section-contact">
 				<div className="title">Contact</div>
