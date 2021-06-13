@@ -22,5 +22,5 @@ export const MenuItems = [
 	{text: 'Resume',
 	path:'/resume',
 	cName: 'navbar-mobile-link',
-  url: 'https://drive.google.com/file/d/1hRvr45jeSoawwZuZXiDGVcGg24azsNkd/view?usp=sharing'}
+  url: 'https://www.linkedin.com/in/kervy-rivas-rojas/'}
 ]
