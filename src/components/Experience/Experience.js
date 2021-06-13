@@ -116,7 +116,7 @@ const Experience = props => {
     setValue(newValue);
   };
 	return (
-		<div>
+		<div className="exp-container">
 			<a id="experience"/>
 			<div id='section-exp'> 
 				<div className='title'>Experience</div>

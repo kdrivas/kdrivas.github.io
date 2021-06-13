@@ -1,5 +1,11 @@
 #section-pub {
-	padding: 10%;
+	position: relative;
+	padding: 0 10%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.pub-container {
 	height: 100vh;
 }
 

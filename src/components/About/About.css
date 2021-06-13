@@ -1,8 +1,12 @@
 #section-about {
-	padding: 5% 10%;
+	position: relative;
+	padding: 0 10%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.container-about {
 	height: 100vh;
-	align-items: center;
-	justify-content: center;
 }
 
 .title {

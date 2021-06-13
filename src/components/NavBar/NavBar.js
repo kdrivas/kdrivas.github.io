@@ -31,7 +31,7 @@ const NavBar = ({children}) => {
 
 	return (
 		<div>
-			<nav className={showNav ? "NavItems active-nav" : "NavItems hidden-nav"}>
+			<nav className={showNav || clicked ? "NavItems active-nav" : "NavItems hidden-nav"}>
 				<div className="menu-icon" onClick={event => handleClick(setClicked, clicked)}>
 					<Hamburguer status={clicked ? "open" : "close"}></Hamburguer>
 				</div>

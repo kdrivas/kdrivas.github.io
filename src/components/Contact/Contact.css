@@ -1,12 +1,12 @@
-.contact-container {
-	height: 100vh;
-}
-
 #section-contact {
 	position: relative;
 	padding: 0 10%;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+.contact-container {
+	height: 100vh;
 }
 
 .title {

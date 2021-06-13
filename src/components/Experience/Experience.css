@@ -1,5 +1,11 @@
 #section-exp {
-	padding: 10%;
+	position: relative;
+	padding: 0 10%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.exp-container {
 	height: 100vh;
 }
 

@@ -4,7 +4,7 @@ import './Publications.css';
 
 const Publications = props => {
 	return (
-		<div>
+		<div className="pub-container">
 			<a id="publications"/>
 			<div id="section-pub">
 				<div className="title">Publications</div>
