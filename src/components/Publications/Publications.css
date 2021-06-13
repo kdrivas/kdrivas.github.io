@@ -26,3 +26,9 @@
 .paper a{
 	text-decoration: none;
 }
+
+@media only screen and (max-width: 480px) {
+	.list-paper {
+		font-size: 13px;
+	}
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import './Experience.css';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -68,7 +67,6 @@ const useStylesVertical = makeStyles((theme) => ({
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
 		minWidth: '30%',
-		fontSize: 120,
   },
 }));
 
@@ -76,7 +74,8 @@ const useStylesHorizontal = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-		width: '100%'
+		width: '100%',
+		height: 250
   },
 }));
 

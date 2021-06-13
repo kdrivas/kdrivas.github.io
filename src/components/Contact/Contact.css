@@ -59,3 +59,10 @@
 .frame {
 	display: none;
 }
+
+@media screen and (max-width: 480px) {
+	.data-container {
+		display: grid;
+		width: 100%;
+	}
+}

@@ -3,6 +3,8 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import './Contact.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -10,9 +12,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
   },
-  margin: {
+  margin_lg: {
     margin: '2.5%',
     width: '45%',
+  },
+  margin_sm: {
+    margin: '2.5%',
+    width: '95%',
   },
 	button: {
 		justifyContent: 'center',
@@ -22,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Contact = props => {
 	const classes = useStyles();
+	const theme = useTheme();
+	const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
 	return (
 		<div className="contact-container">
@@ -29,10 +37,11 @@ const Contact = props => {
 			<div id="section-contact">
 				<div className="title">Contact</div>
 				<ul className="social-container">
-					<li>Linkedin</li>
-					<li>Google Scholar</li>
-					<li>Github</li>
-					<li>Twitter</li>
+					<li><a href="https://www.linkedin.com/in/kervy-rivas-rojas/"><i class={matches ? "fab fa-linkedin fa-3x" : "fab fa-linkedin fa-2x"} ></i></a></li>
+					<li><a href="https://scholar.google.com.pe/citations?hl=es&user=Dtc2FWIAAAAJ"><i class={matches ? "ai ai-google-scholar-square ai-3x" : "ai ai-google-scholar-square ai-2x"}></i>
+</a></li>
+					<li><a href="https://github.com/kdrivas"><i class={matches ? "fab fa-github fa-3x" : "fab fa-github fa-2x"}></i></a></li>
+					<li><a href="https://twitter.com/nautilus_t8"><i class={matches ? "fab fa-twitter fa-3x" : "fab fa-twitter fa-2x"}></i></a></li>
 				</ul>
 
 				<div className="form-container">
@@ -44,14 +53,14 @@ const Contact = props => {
 								variant="filled" 
 								label="Name" 
 								inputProps={{min: 0, style: { textAlign: 'center' }}} 
-								className={classes.margin}/>
+								className={matches ? classes.margin_lg : classes.margin_sm}/>
 							<TextField 
 								name="entry.1072577155" 
 								id="entry.1072577155" 
 								variant="filled" 
 								label="Email" 
 								inputProps={{min: 0, style: { textAlign: 'center' }}} 
-								className={classes.margin}/>
+								className={matches ? classes.margin_lg : classes.margin_sm}/>
 						</div>
 						<div className="message-container">
 							<TextField

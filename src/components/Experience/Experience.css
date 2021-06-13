@@ -31,3 +31,10 @@
 .date-range {
 	font-size: 2vh;
 }
+
+@media only screen and (max-width: 480px) {
+	.activities {
+		padding-left: 5%;
+		font-size: 13px;
+	}
+}
