@@ -1,8 +1,14 @@
 #section-profile{
 	padding-right: 20%;
 	padding-left: 5%;
-	padding-top: 8%;
+	padding-top: 20%;
 	padding-bottom: 20%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.profile-container {
 	height: 100vh;
 }
 
@@ -21,18 +27,33 @@
 		padding-top: 1%;
 		font-size: 70px;
 	}
+
+	#section-profile p{
+		padding-top: 6%;
+		font-size: 1.6vh;
+	}
 }
 
 @media only screen and (min-width: 700px) {
 	#section-profile h1{
 		padding-top: 1%;
-		font-size: 70px;
+		font-size: 110px;
+	}
+
+	#section-profile p{
+		padding-top: 6%;
+		font-size: 1.7vh;
 	}
 }
 
 @media only screen and (min-width: 1000px) {
 	#section-profile h1{
 		padding-top: 1%;
-		font-size: 100px;
+		font-size: 120px;
+	}
+
+	#section-profile p{
+		padding-top: 6%;
+		font-size: 3vh;
 	}
 }

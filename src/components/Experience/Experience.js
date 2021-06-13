@@ -67,7 +67,8 @@ const useStylesVertical = makeStyles((theme) => ({
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
-		minWidth: '20%',
+		minWidth: '30%',
+		fontSize: 120,
   },
 }));
 
